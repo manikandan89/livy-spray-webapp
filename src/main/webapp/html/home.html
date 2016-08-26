@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="lib/angular.js"></script>
+    <script src="js/home.js"></script>
+</head>
+<body ng-app="homeApp" ng-controller="WelcomeController">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Livy Scala API Demo App</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!--<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">-->
+        <!--<div class="navbar-header">-->
+            <!--<a class="navbar-brand" href="#">Livy Scala API Demo App</a>-->
+        <!--</div>-->
+    <!--</div>-->
+    <br/><br/><br/><br/><br/>
+    <form role="form" name="name" ng-submit="submitForm()">
+        <div style="margin-left: 15%">
+            <h2>COMPUTATIONS</h2>
+            <br /><br />
+            <div class="row" >
+                <div class="col-md-12">
+                    <input type="radio" style="margin-right: 5%" name="operation" value="kdensity" id="op1" ng-model="example.operation">
+                    <label for="op1"><h3>Kernel Density</h3></label>
+                </div>
+            </div>
+            <br/>
+            <div class="row" >
+                <div class="col-md-12">
+                    <input type="radio" style="margin-right: 5%" name="operation" value="correlation" id="op2" ng-model="example.operation">
+                    <label for="op2"><h3>Correlation</h3></label>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <button class="btn btn-lg btn-primary" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>

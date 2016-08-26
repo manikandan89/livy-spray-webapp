@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kernel Density Result</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../lib/jquery-1.11.1.js"></script>
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="../lib/angular.js"></script>
+    <script src="../js/kerneldensityresult.js"></script>
+    <style>
+        .ct-label{
+            font-size: 1.5rem !important;
+        }
+    </style>
+</head>
+<body ng-app="kdensityResultApp">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Livy Scala API Demo App</a>
+        </div>
+    </div>
+</div>
+
+
+<div class = "container" ng-controller="KernelDensityResultController">
+    <br /><br /> <br />
+    <h2>Kernel density Results</h2>
+    <br /><br /> <br /><br /><br />
+    <div class="container">
+        <h4>Table with the resultant Probabilities for the corresponding Estimation points</h4>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tr>
+                    <td><b>Estimation Points</b></td>
+                    <td><b>Probability (Percentage of 100)</b></td>
+                </tr>
+                <tr ng-repeat="point in points">
+                    <td>{{ point }}</td>
+                    <td>{{ results[$index] }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+<br /> <br /> <br /> <br />
+
+<div class ="container">
+    <h4>Chart representing Estimation points on X-axis and the Probability on the Y-axis(Percentage of 100)</h4>
+    <div class="ct-chart ct-perfect-fourth"></div>
+</div>
+
+
+</body>
+</html>
